@@ -14,9 +14,9 @@ def circle(r):
     halfcircle(r)
 
 def xy(x, y):
-    t.penup()
-    t.goto(x, y)
-    t.pendown()
+    tr.penup()
+    tr.goto(x, y)
+    tr.pendown()
 
 tr.right(180)
 tr.left(180)
@@ -46,6 +46,6 @@ tr.width(10)
 tr.forward(20)
 
 xy(-30, -20)
-t.color('red')
+tr.color('red')
 halfcircle(40)
     
