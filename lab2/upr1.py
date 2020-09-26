@@ -3,8 +3,8 @@ import numpy as np
 
 from random import *
 def brdv():
-    tr.forward(randint(7,15))
-    tr.left(randint(7,15))
+    tr.forward(randint(0,50))
+    tr.left(randint(0,360))
     
      
 for i in range(10000):
