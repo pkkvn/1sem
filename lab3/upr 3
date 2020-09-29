@@ -1,0 +1,53 @@
+import pygame
+from pygame.draw import *
+import numpy as np
+
+pygame.init()
+
+FPS = 30
+screen = pygame.display.set_mode((500, 700))
+
+(x0, y0) = (0, 0)
+
+black = (0, 0, 0)
+white = (255, 255, 255)
+yellow = (255, 255, 0)
+red = (255, 0, 0)
+grey = (128, 128, 128)
+green = (0, 255, 0)
+skyblue = (135, 206, 250)
+olive = (128, 128, 0)
+brown = (184, 134, 11)
+ckota = (205, 133, 63)
+pink = (255, 192, 203)
+
+width = 1
+
+screen.fill(brown)
+
+rect (screen, olive,(x0, y0+300, 500, 400))
+
+def window ():
+    rect (screen, white, (300,20, 180, 260))
+    rect (screen, skyblue, (320, 40, 60, 60))
+    rect (screen, skyblue, (400, 40, 60, 60))
+    rect (screen, skyblue, (320, 120, 60, 140))
+    rect (screen, skyblue, (400, 120, 60, 140))
+
+
+
+
+
+
+
+pygame.display.update()
+clock = pygame.time.Clock()
+finished = False
+
+while not finished:
+    clock.tick(FPS)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            finished = True
+
+pygame.quit()
