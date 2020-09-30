@@ -32,8 +32,24 @@ rect (screen, skyblue, (x0+400, y0+40, 60, 60))
 rect (screen, skyblue, (x0+320, y0+120, 60, 140))
 rect (screen, skyblue, (x0+400, y0+120, 60, 140))
 
-ellipse (screen, ckota, (340, 330, 120, 80))#hvost
-ellipse (screen, black, (340, 330, 120, 80), width)
+surf = pygame.Surface((240, 80))#hvost
+surf.set_colorkey(black)
+ellipse(surf, ckota, (0 ,0 , 240, 80))
+oldCenter = (420, 420)
+rotatedSurf = pygame.transform.rotate(surf, 330)
+rotEllipse = rotatedSurf.get_rect()
+rotEllipse.center = oldCenter
+screen.blit(rotatedSurf, rotEllipse)
+
+surf = pygame.Surface((240, 80))#kontur hvost
+surf.set_colorkey(black)
+ellipse(surf, (0, 0, 1), (0 ,0 , 240, 80), width)
+oldCenter = (420, 420)
+rotatedSurf = pygame.transform.rotate(surf, 330)
+rotEllipse = rotatedSurf.get_rect()
+rotEllipse.center = oldCenter
+screen.blit(rotatedSurf, rotEllipse)
+
 
 
 ellipse(screen, ckota, (100, 320, 280, 160))#tulovische
@@ -63,7 +79,26 @@ circle (screen, black, (130, 400), 15, width)
 
 ellipse (screen, black, (72, 388, 8, 20))#levzrach(OK)
 
+surf = pygame.Surface((14, 6))
+surf.set_colorkey(black)
+ellipse(surf, white, (0 ,0 , 14, 6))
+oldCenter = (68, 396)
+rotatedSurf = pygame.transform.rotate(surf, 300)
+rotEllipse = rotatedSurf.get_rect()
+rotEllipse.center = oldCenter
+screen.blit(rotatedSurf, rotEllipse)
+
+
 ellipse (screen, black, (132, 388, 8, 20))#pravzrach(OK)
+
+surf = pygame.Surface((14, 6))
+surf.set_colorkey(black)
+ellipse(surf, white, (0 ,0 , 14, 6))
+oldCenter = (128, 396)
+rotatedSurf = pygame.transform.rotate(surf, 300)
+rotEllipse = rotatedSurf.get_rect()
+rotEllipse.center = oldCenter
+screen.blit(rotatedSurf, rotEllipse)
 
 polygon (screen, pink, [(100, 418),(94, 410),(106, 410)])#nose
 polygon (screen, black, [(100, 418),(94, 410),(106, 410)], width)
